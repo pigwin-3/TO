@@ -1,5 +1,3 @@
-# flyttet til egen repo
-
 # feilinfo
 ## et spill om feilinformasjon
 ---
@@ -128,12 +126,18 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
     - [ ] facta side (for spilldel)
 - [ ] ferdig (gjenerelt)
 ### backend
-- [ ] koble til sql
-- [ ] få til å sende ut rigktig data til sidende
+- [x] koble til sql
+- [ ] få til å sende ut rigktig data til sidende(for øvingdel)
     - [ ] Hovedside
     - [ ] katagori side
-    - [ ] spillside
-    - [ ] spørsmål side
+    - [x] spillside
+    - [x] spørsmål side
+    - [ ] facta side
+- [ ] få til å sende ut rigktig data til sidende(for spilldel)
+    - [ ] Hovedside
+    - [ ] katagori side
+    - [x] spillside
+    - [x] spørsmål side
     - [ ] facta side
 - [ ] ferdig
 ### sql
