@@ -1,0 +1,29 @@
+.title{
+    background-color: chocolate;
+}
+.bottom{
+    background-color: blue;
+}
+/* for hovedside, katgori velging, spillsiden */
+.top1 {
+    background-color: red;
+}
+/* for hovedside, katgori velging*/
+.box {
+    background-color: yellow;
+    outline: 1px black;
+}
+.box-1n3 {
+    background-color: royalblue;
+}
+.box-info {
+    background-color: aqua;
+}
+/* for spørsmålet, sanheten */
+.top2 {
+    background-color: red;
+}
+/* for spørsmålet, sanheten */
+.low{
+    background-color: greenyellow;
+}
