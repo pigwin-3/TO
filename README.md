@@ -119,17 +119,14 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
     - [ ] spørsmål side (for øvingdel)
     - [ ] facta side (for øvingdel)
 - [ ] ferdig (med øvingdel)
-    - [ ] Hovedside (for spilldel)
-    - [ ] katagori side (for spilldel)
-    - [ ] spillside (for spilldel)
     - [ ] spørsmål side (for spilldel)
-    - [ ] facta side (for spilldel)
+    - [ ] siste side (idk yet) (for spilldel)
 - [ ] ferdig (gjenerelt)
 ### backend
 - [x] koble til sql
 - [ ] få til å sende ut rigktig data til sidende(for øvingdel)
-    - [ ] Hovedside
-    - [ ] katagori side
+    - [x] Hovedside
+    - [ ] katagori (*tema) side
     - [x] spillside
     - [x] spørsmål side
     - [ ] facta side
@@ -138,7 +135,6 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
     - [ ] katagori side
     - [x] spillside
     - [x] spørsmål side
-    - [ ] facta side
 - [ ] ferdig
 ### sql
 - [x] lage stukturen
