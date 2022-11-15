@@ -25,6 +25,8 @@ app.get('/cat', (req, res) => {
     con.query(sql, function (err, result) {
       if (err) throw err;
       //console.log("test", result);
+      const t1 = performance.now();
+      result.push(t1 - t0);
       res.send(result)
     });
   });
