@@ -1,5 +1,8 @@
+function themeGet(theme_id)
+{
+console.log(theme_id);
 var t0 = performance.now();
-fetch('http://localhost:3000/cat')
+fetch('http://localhost:3000/theme/' + theme_id)
     .then((response) => response.json())
     .then(
         
@@ -14,7 +17,7 @@ fetch('http://localhost:3000/cat')
                 Temp += '<div class="box">';
                 Temp += '<div class="box-1n3">' + itemData.Name + '</div>';
                 Temp += '<div class="box-info">' + itemData.about + '</div>';
-                Temp += '<div class="box-1n3"><button class="btn" id="' + itemData.ID + '" onClick="themeGet(this.id)">velg</button> </div>';
+                Temp += '<div class="box-1n3"><button class="btn" id="' + itemData.qn + '" onClick="game(this.id)">velg</button> </div>';
                 Temp += '</div>'
             });
             var t1 = performance.now();
@@ -23,3 +26,4 @@ fetch('http://localhost:3000/cat')
             }
         }
     );
+}

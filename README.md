@@ -113,9 +113,9 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
     - [x] spørsmål side
     - [x] facta side
 - [ ] js (endring av html css kan skje her) kobling til backend
-    - [ ] Hovedside (for øvingdel)
-    - [ ] katagori side (for øvingdel)
-    - [ ] spillside (for øvingdel)
+    - [x] Hovedside (for øvingdel)
+    - [x] katagori side (for øvingdel)
+    - [x] spillside (for øvingdel)
     - [ ] spørsmål side (for øvingdel)
     - [ ] facta side (for øvingdel)
 - [ ] ferdig (med øvingdel)
@@ -126,9 +126,9 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
 - [x] koble til sql
 - [ ] få til å sende ut rigktig data til sidende(for øvingdel)
     - [x] Hovedside
-    - [ ] katagori (*tema) side
+    - [x] katagori (*tema) side
     - [x] spillside
-    - [x] spørsmål side
+    - [ ] spørsmål side
     - [ ] facta side
 - [ ] få til å sende ut rigktig data til sidende(for spilldel)
     - [ ] Hovedside
