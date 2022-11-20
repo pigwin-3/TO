@@ -1,4 +1,5 @@
 var t0 = performance.now();
+document.getElementById("main").innerHTML = "<p>trying to conect to backend</p>";
 fetch('http://localhost:3000/cat')
     .then((response) => response.json())
     .then(

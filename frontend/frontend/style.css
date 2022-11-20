@@ -2,7 +2,7 @@ body{
     margin: 0%;
 }
 /* box har alt i seg */
-.main{
+#main{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
