@@ -167,6 +167,7 @@ body{
     bottom: 25.9%;
     border-radius: 5px;
     background-color: #202020;
+    background-size: cover;
 }
 .statement{
     text-align: center;
@@ -175,7 +176,7 @@ body{
     font-weight: 700;
 }
 .btntru{
-    border: 2.5px solid #002F99;
+    border: 2.5px solid #269900;
     background-color: #191919;
     margin-top: 0.50%;
     border-radius: 15px;
@@ -198,7 +199,7 @@ body{
     background-color: #101010;
 }
 .btnfal{
-    border: 2.5px solid #002F99;
+    border: 2.5px solid #990000;
     background-color: #191919;
     margin-top: 0.50%;
     border-radius: 15px;
