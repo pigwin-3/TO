@@ -2,21 +2,7 @@ function fax(truFal)
 {
     //starts preformanse monitor
     var t0 = performance.now();
-    //gets data from local storage
-    const qn = localStorage.getItem('TheQN');
-    //parces the json string (from practice.js)
-    var qnn = (JSON.parse(qn))
     //checks if the awnser was correct or not
-    if (truFal == qnn.trufal){
-        //console.log ("correct")
-        var classTruFal = ("trufax")
-        var faltru = ("Riktig!")
-    }
-    else {
-        //console.log("wrong")
-        var classTruFal = ("falfax")
-        var faltru = ("Feil")
-    }
     var Temp = '<div class="top3">'
         Temp += '<div class="imgbox"><div class="img2" style="background-image: url(' + qnn.img + ');"><div class="imgsrc">Kjilde: ' + qnn.srcimg + '</div></div></div>'
         Temp += '<div class="fax"><div class="' + classTruFal + '">' + faltru + '</div><div class="text">' + qnn.fact + '</div></div>'

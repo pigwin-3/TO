@@ -2,7 +2,7 @@ body{
     margin: 0%;
 }
 /* box har alt i seg */
-.main{
+#main{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,16 +12,6 @@ body{
     color: #f5f5f5;
 }
 /* for alt*/
-@keyframes btn-hover {
-    from {
-        border: 2.5px solid #002F99;
-        background-color: #191919;
-    }
-    100% {
-        border: 2.5px solid #0039bf;
-        background-color: #101010;
-    }
-}
 .title{
     text-align: center;
     padding: 1vh;
@@ -43,8 +33,8 @@ body{
     margin: auto;
     overflow: auto;
     scroll-behavior: smooth;
-    border: 2.5px solid #002F99;
-    border-radius: 25px;
+    border: 0.4vh solid #002F99;
+    border-radius: 3vh;
     padding-top: 5px;
 }
 /* fjern scrollbar */
@@ -64,11 +54,11 @@ body{
     justify-content: center;
     flex-direction: row;
     background-color: #202020;
-    border-radius: 10px;
+    border-radius: 1.5vh;
     height: 20vh;
     width: 98%;
     margin: 0.5%;
-    border: 2.5px solid black;
+    border: 0.4vh solid black;
 }
 .box-1n3 {
     padding: 1%;
@@ -85,7 +75,7 @@ body{
 }
 .btn {
     background-color: #191919;
-    border: 2.5px solid #002F99;
+    border: 0.4vh solid #002F99;
     font-size: 6vh;
     font-weight: 600;
     height: 8vh;
@@ -94,19 +84,18 @@ body{
     margin-bottom: 4vh;
     text-align: center;
     transition: 0.2s;
-    border-radius: 10px;
+    border-radius: 1.5vh;
     color: #f5f5f5;
     cursor: pointer;
 }
 .btn:hover {
-    animation: btn-hover 0.1s linear 0s;
-    border: 2.5px solid #0039bf;
+    border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
 /*for spillsiden*/
 .btn2 {
     background-color: #191919;
-    border: 2.5px solid #002F99;
+    border: 0.4vh solid #002F99;
     font-size: 12vh;
     font-weight: 600;
     height: 14vh;
@@ -117,14 +106,13 @@ body{
     margin-top: 15vh;
     text-align: center;
     transition: 0.2s;
-    border-radius: 10px;
+    border-radius: 1.5vh;
     color: #f5f5f5;
     cursor: pointer;
     transform: translateX(50%);
 }
 .btn2:hover {
-    animation: btn-hover 0.1s linear 0s;
-    border: 2.5px solid #0039bf;
+    border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
 
@@ -143,7 +131,7 @@ body{
     color: #101010;
     bottom: 0;
     left: 0;
-    border-radius: 5px;
+    border-radius: 0.5vh;
     padding: 1px;
     font-size: 2vh;
 }
@@ -156,8 +144,8 @@ body{
     background-color: #191919;
     margin: auto;
     margin-bottom: 0%;
-    border: 2.5px solid #002F99;
-    border-radius: 25px;
+    border: 0.4vh solid #002F99;
+    border-radius: 3vh;
 }
 .img{
     height: 60vh;
@@ -165,8 +153,9 @@ body{
     max-width: 80%;
     position: absolute;
     bottom: 25.9%;
-    border-radius: 5px;
+    border-radius: 0.5vh;
     background-color: #202020;
+    background-size: cover;
 }
 .statement{
     text-align: center;
@@ -175,10 +164,10 @@ body{
     font-weight: 700;
 }
 .btntru{
-    border: 2.5px solid #002F99;
+    border: 0.4vh solid #269900;
     background-color: #191919;
     margin-top: 0.50%;
-    border-radius: 15px;
+    border-radius: 1.5vh;
     height: 95%;
     width: 100%;
     margin-left: 2.5%;
@@ -193,15 +182,14 @@ body{
     cursor: pointer;
 }
 .btntru:hover {
-    animation: btn-hover 0.1s linear 0s;
-    border: 2.5px solid #0039bf;
+    border: 0.4vh solid #178b00;
     background-color: #101010;
 }
 .btnfal{
-    border: 2.5px solid #002F99;
+    border: 0.4vh solid #990000;
     background-color: #191919;
     margin-top: 0.50%;
-    border-radius: 15px;
+    border-radius: 1.5vh;
     height: 95%;
     width: 100%;
     margin-left: 1.25%;
@@ -216,8 +204,7 @@ body{
     cursor: pointer;
 }
 .btnfal:hover {
-animation: btn-hover 0.1s linear 0s;
-border: 2.5px solid #0039bf;
+border: 0.4vh solid #6a0000;
 background-color: #101010;
 }
 /*for sanheten*/
@@ -239,8 +226,8 @@ background-color: #101010;
     background-color: #191919;
     margin: auto;
     margin-bottom: 0%;
-    border: 2.5px solid #002F99;
-    border-radius: 25px;
+    border: 0.4vh solid #002F99;
+    border-radius: 3vh;
 }
 .imgbox {
     display: flex;
@@ -254,7 +241,7 @@ background-color: #101010;
     max-width: 45%;
     position: absolute;
     bottom: 25.9%;
-    border-radius: 5px;
+    border-radius: 2.5vh;
     background-color: #202020;
     margin: auto;
     margin-bottom: 2.5vh;
@@ -275,17 +262,18 @@ background-color: #101010;
     color: #c00000;
     text-align: center;
 }
+/*.text brukes også i sumuery*/
 .text{
     text-align-last: center;
     font-size: 2.5vh;
 }
 .btnnex{
-    border: 2.5px solid #002F99;
+    border: 0.4vh solid #002F99;
     background-color: #191919;
     margin-top: 0.50%;
-    border-radius: 15px;
+    border-radius: 1.5vh;
     height: 95%;
-    width: 30vh;
+    width: 40vh;
     text-align: center;
     font-size: 11vh;
     font-weight: 500;
@@ -295,11 +283,63 @@ background-color: #101010;
     cursor: pointer;
 }
 .btnnex:hover {
-    animation: btn-hover 0.1s linear 0s;
-    border: 2.5px solid #0039bf;
+    border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
-@media  all and (max-width: 800px) {
+/*for sumuery*/
+.top4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    width: 80%;
+    background-color: #191919;
+    margin: auto;
+    margin-bottom: 0%;
+    border: 0.4vh solid #002F99;
+    border-radius: 3vh;
+}
+.btnfin{
+    border: 0.4vh solid #002F99;
+    background-color: #191919;
+    margin-top: 0.50%;
+    border-radius: 1.5vh;
+    height: 95%;
+    width: 50vh;
+    text-align: center;
+    font-size: 10vh;
+    font-weight: 500;
+    transition: 0.2s;
+    max-width: 92%;
+    color: #f5f5f5;
+    cursor: pointer;
+}
+.btnfin:hover {
+    border: 0.4vh solid #0039bf;
+    background-color: #101010;
+}
+.result {
+    width: 50vh;
+    max-width: 80vw;
+    height: 60vh;
+    margin: auto;
+    margin-bottom: 1vh;
+    border: 0.4vh solid #002F99;
+    overflow: auto;
+    scroll-behavior: smooth;
+    border-radius: 1.5vh;
+}
+/* fjern scrollbar */
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+/* fjern den for IE, Edge og Firefox */
+.result {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+@media  all and (max-width: 110vh) {
     .top3 {
         flex-direction: column;
     }
@@ -326,7 +366,7 @@ background-color: #101010;
         font-size: 5vh;
     }
 }
-@media  all and (max-width: 600px) {
+@media  all and (max-width: 80vh) {
     .low{
         flex-direction: column;
         height: 15vh;
@@ -377,8 +417,13 @@ background-color: #101010;
     .box-info {
         width: 100%;
     }
+    .btnfin {
+        font-size: 7vh;
+        height: 90%;
+        width: 40vh;
+    }
 }
-@media  all and (max-width: 500px) {
+@media  all and (max-width: 70vh) {
     .img{
         height: 60vw;
         width: 60vw;
@@ -393,7 +438,7 @@ background-color: #101010;
         font-weight: 600;
     }
 }
-@media  all and (max-width: 400px) {
+@media  all and (max-width: 60vh) {
     .img{
         height: 70vw;
         width: 70vw;
@@ -409,5 +454,10 @@ background-color: #101010;
     }
     .box-1n3 {
         font-size: 5vh;
+    }
+    .btnfin {
+        font-size: 6vh;
+        height: 85%;
+        width: 35vh;
     }
 }
