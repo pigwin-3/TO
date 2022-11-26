@@ -148,8 +148,8 @@ body{
     border-radius: 3vh;
 }
 .img{
-    height: 60vh;
-    width: 60vh;
+    height: 45vh;
+    width: 45vh;
     max-width: 80%;
     position: absolute;
     bottom: 25.9%;
@@ -160,7 +160,7 @@ body{
 .statement{
     text-align: center;
     padding: 1vh;
-    font-size: 5vh;
+    font-size: 7vh;
     font-weight: 700;
 }
 .btntru{
@@ -324,8 +324,10 @@ background-color: #101010;
     height: 60vh;
     margin: auto;
     margin-bottom: 1vh;
+    background-color: #202020;
     border: 0.4vh solid #002F99;
-    overflow: auto;
+    overflow-x: visible;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     border-radius: 1.5vh;
 }
@@ -338,6 +340,40 @@ background-color: #101010;
 .result {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+.sumuary {
+    display: flex;
+    flex-direction: row;
+    min-height: 6.9vh;
+    width: 91%;
+    margin: 1.75%;
+    background-color: #191919;
+    border: 0.4vh solid #002F99;
+    padding: 1vh;
+}
+.summary_txtbox{
+    display: flex;
+    flex-direction: column;
+}
+.summary_txt_trufal {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+.sumuary_txt {
+    text-align: center;
+    width: 80%;
+    min-height: 4.20vh;
+    padding-top: 1vh;
+    padding-left: 0.1vh;
+    padding-right: 0.1vh;
+    line-height: 3vh;
+    font-size: 1.5vh;
+}
+@media  all and (max-width: 175vh) {
+    .statement{
+        font-size: 5vh;
+    }
 }
 @media  all and (max-width: 110vh) {
     .top3 {
@@ -365,6 +401,13 @@ background-color: #101010;
     .box-1n3 {
         font-size: 5vh;
     }
+    .statement{
+        font-size: 4vh;
+    }
+    .img{
+        height: 40vw;
+        width: 40vw;
+    }
 }
 @media  all and (max-width: 80vh) {
     .low{
@@ -380,8 +423,8 @@ background-color: #101010;
         margin-right: 1.25%;
     }
     .img{
-        height: 50vw;
-        width: 50vw;
+        height: 35vw;
+        width: 35vw;
         max-width: 80%;
         bottom: 39.5%;
     }
@@ -425,8 +468,8 @@ background-color: #101010;
 }
 @media  all and (max-width: 70vh) {
     .img{
-        height: 60vw;
-        width: 60vw;
+        height: 50vw;
+        width: 50vw;
     }
     .img2{
         height: 30vh;
@@ -437,11 +480,15 @@ background-color: #101010;
         font-size: 8vh;
         font-weight: 600;
     }
+    .statement{
+        font-size: 3vh;
+        font-weight: 600;
+    }
 }
 @media  all and (max-width: 60vh) {
     .img{
-        height: 70vw;
-        width: 70vw;
+        height: 60vw;
+        width: 60vw;
     }
     .text{
         font-size: 1.5vh;

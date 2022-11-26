@@ -12,12 +12,14 @@ fetch('http://localhost:3000/qn/' + theme_id)
             //extracts the api response time from the json
             let api = data.pop();
             console.log('fetched from api ' + api + ' ms');
+            //(for practiceSum())
+            var sumStore=[]
+            localStorage.setItem('SumStore', JSON.stringify(sumStore));
             //gets the first question
             let qn = data.pop();
             //puts the json values into local storage as a strings
             localStorage.setItem('TheQN', JSON.stringify(qn));
             localStorage.setItem('TheData', JSON.stringify(data));
-            localStorage.setItem('test', JSON.stringify());
 
             var Temp = '<div class="top2">';
                 Temp += '<div class="statement">' + qn.qn + '</div>';

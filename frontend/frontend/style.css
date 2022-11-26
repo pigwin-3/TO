@@ -12,16 +12,6 @@ body{
     color: #f5f5f5;
 }
 /* for alt*/
-@keyframes btn-hover {
-    from {
-        border: 0.4vh solid #002F99;
-        background-color: #191919;
-    }
-    100% {
-        border: 0.4vh solid #0039bf;
-        background-color: #101010;
-    }
-}
 .title{
     text-align: center;
     padding: 1vh;
@@ -99,7 +89,6 @@ body{
     cursor: pointer;
 }
 .btn:hover {
-    animation: btn-hover 0.1s linear 0s;
     border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
@@ -123,7 +112,6 @@ body{
     transform: translateX(50%);
 }
 .btn2:hover {
-    animation: btn-hover 0.1s linear 0s;
     border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
@@ -160,8 +148,8 @@ body{
     border-radius: 3vh;
 }
 .img{
-    height: 60vh;
-    width: 60vh;
+    height: 45vh;
+    width: 45vh;
     max-width: 80%;
     position: absolute;
     bottom: 25.9%;
@@ -172,7 +160,7 @@ body{
 .statement{
     text-align: center;
     padding: 1vh;
-    font-size: 5vh;
+    font-size: 7vh;
     font-weight: 700;
 }
 .btntru{
@@ -194,8 +182,7 @@ body{
     cursor: pointer;
 }
 .btntru:hover {
-    animation: btn-hover 0.1s linear 0s;
-    border: 0.4vh solid #0039bf;
+    border: 0.4vh solid #178b00;
     background-color: #101010;
 }
 .btnfal{
@@ -217,8 +204,7 @@ body{
     cursor: pointer;
 }
 .btnfal:hover {
-animation: btn-hover 0.1s linear 0s;
-border: 0.4vh solid #0039bf;
+border: 0.4vh solid #6a0000;
 background-color: #101010;
 }
 /*for sanheten*/
@@ -276,6 +262,7 @@ background-color: #101010;
     color: #c00000;
     text-align: center;
 }
+/*.text brukes også i sumuery*/
 .text{
     text-align-last: center;
     font-size: 2.5vh;
@@ -296,7 +283,6 @@ background-color: #101010;
     cursor: pointer;
 }
 .btnnex:hover {
-    animation: btn-hover 0.1s linear 0s;
     border: 0.4vh solid #0039bf;
     background-color: #101010;
 }
@@ -304,7 +290,7 @@ background-color: #101010;
 .top4 {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     height: 70vh;
     width: 80%;
     background-color: #191919;
@@ -328,10 +314,47 @@ background-color: #101010;
     color: #f5f5f5;
     cursor: pointer;
 }
-.btnnex:hover {
-    animation: btn-hover 0.1s linear 0s;
+.btnfin:hover {
     border: 0.4vh solid #0039bf;
     background-color: #101010;
+}
+.result {
+    width: 50vh;
+    max-width: 80vw;
+    height: 60vh;
+    margin: auto;
+    margin-bottom: 1vh;
+    border: 0.4vh solid #002F99;
+    overflow: auto;
+    scroll-behavior: smooth;
+    border-radius: 1.5vh;
+}
+/* fjern scrollbar */
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+/* fjern den for IE, Edge og Firefox */
+.result {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.sumuary {
+    display: flex;
+    flex-direction: row;
+    min-height: 6.9vh;
+    width: 95%;
+    margin: 1.75%;
+    border: 0.4vh solid #002F99;
+}
+.sumuary_txt {
+    width: 80%;
+    min-height: 4.20vh;
+}
+@media  all and (max-width: 175vh) {
+    .statement{
+        font-size: 5vh;
+    }
 }
 @media  all and (max-width: 110vh) {
     .top3 {
@@ -359,6 +382,13 @@ background-color: #101010;
     .box-1n3 {
         font-size: 5vh;
     }
+    .statement{
+        font-size: 4vh;
+    }
+    .img{
+        height: 40vw;
+        width: 40vw;
+    }
 }
 @media  all and (max-width: 80vh) {
     .low{
@@ -374,8 +404,8 @@ background-color: #101010;
         margin-right: 1.25%;
     }
     .img{
-        height: 50vw;
-        width: 50vw;
+        height: 35vw;
+        width: 35vw;
         max-width: 80%;
         bottom: 39.5%;
     }
@@ -419,8 +449,8 @@ background-color: #101010;
 }
 @media  all and (max-width: 70vh) {
     .img{
-        height: 60vw;
-        width: 60vw;
+        height: 50vw;
+        width: 50vw;
     }
     .img2{
         height: 30vh;
@@ -431,11 +461,15 @@ background-color: #101010;
         font-size: 8vh;
         font-weight: 600;
     }
+    .statement{
+        font-size: 3vh;
+        font-weight: 600;
+    }
 }
 @media  all and (max-width: 60vh) {
     .img{
-        height: 70vw;
-        width: 70vw;
+        height: 60vw;
+        width: 60vw;
     }
     .text{
         font-size: 1.5vh;

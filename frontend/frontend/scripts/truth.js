@@ -11,12 +11,25 @@ function fax(truFal)
         //console.log ("correct")
         var classTruFal = ("trufax")
         var faltru = ("Riktig!")
+        var cor = ("1")
     }
     else {
         //console.log("wrong")
         var classTruFal = ("falfax")
         var faltru = ("Feil")
+        var cor = ("0")
     }
+    if (qnn.truFal == "1"){
+        var wastrufal = ("true")
+    }
+    else {
+        var wastrufal = ("false")
+    }
+    //stores evrythin for practiceSum()
+    var sumStore = JSON.parse(localStorage.getItem('SumStore'));
+    sumStore.push({"cor":cor, "wastrufal":wastrufal})
+    console.log(sumStore)
+
     var Temp = '<div class="top3">'
         Temp += '<div class="imgbox"><div class="img2" style="background-image: url(' + qnn.img + ');"><div class="imgsrc">Kjilde: ' + qnn.srcimg + '</div></div></div>'
         Temp += '<div class="fax"><div class="' + classTruFal + '">' + faltru + '</div><div class="text">' + qnn.fact + '</div></div>'
@@ -26,13 +39,13 @@ function fax(truFal)
         const cont = localStorage.getItem('TheData');
         //console.log(cont);
         if (cont == 'undefined') {
-            Temp += '<button class="btnnex">ferdig</button>'
+            Temp += '<button class="btnnex" onClick="practiceSum()">ferdig</button>'
         }
         else if (cont == undefined) {
-            Temp += '<button class="btnnex">Ferdig</button>'
+            Temp += '<button class="btnnex" onClick="practiceSum()">Ferdig</button>'
         }
         else if (cont == "[]") {
-            Temp += '<button class="btnnex">Ferdig</button>'
+            Temp += '<button class="btnnex" onClick="practiceSum()">Ferdig</button>'
         }
         else {
             Temp += '<button class="btnnex" onClick="continuePracticeGame()">neste</button>'
