@@ -4,17 +4,13 @@ const cors = require('cors');
 
 var mysql = require('mysql');
 const { time } = require('console');
+var config  = require("./conf.json");
 
 const app = express();
 app.use(cors());
-const port = 3000;
+const port = config.webport;
 
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "wongly_informed-no"
-});
+var con = mysql.createConnection(config.db);
 
 
 // get catagory suffys
@@ -115,4 +111,5 @@ app.get('/tabl', (req, res) => {
 // you shold understand this atleast
 app.listen(port, () => {
   console.log(`ip:${port}`);
+  console.log('done')
 })

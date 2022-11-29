@@ -1,10 +1,12 @@
 function start()
 {
+    //mainly the same as start.js
     //starts preformanse timer
     var t0 = performance.now();
     document.getElementById("main").innerHTML = "<p>trying to conect to backend</p>";
-    //fetches the catagorys from the api
-    fetch('http://localhost:3000/cat')
+    var api = conf('api')
+    //fetches the catagorys from the api¨
+    fetch(api + '/cat')
         .then((response) => response.json())
         .then(
             
