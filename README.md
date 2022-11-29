@@ -143,3 +143,8 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
 - [x] lag 11 dummyspørsmål ![](https://geps.dev/progress/100)
 - [ ] spørsmål legg til 100 spørsmål ![](https://geps.dev/progress/0) (med spørsmål, svar og facta (med sorse))
 - [ ] legg til bilder til alle spørsmålende ![](https://geps.dev/progress/0)
+
+
+
+
+:)
