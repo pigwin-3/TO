@@ -19,16 +19,22 @@ function fax(truFal)
         var faltru = ("Feil")
         var cor = ("0")
     }
-    if (qnn.truFal == "1"){
+    if (qnn.trufal == "1"){
         var wastrufal = ("true")
     }
     else {
         var wastrufal = ("false")
     }
+    if (truFal == 1) {
+        var usrAwns = "true"
+    }
+    else {
+        var usrAwns = "false"
+    }
     //stores evrythin for practiceSum()
     var sumStore = JSON.parse(localStorage.getItem('SumStore'));
-    sumStore.push({"cor":cor, "wastrufal":wastrufal})
-    console.log(sumStore)
+    sumStore.push({"cor":cor, "qn":qnn.qn, "wastrufal":wastrufal, "usrAwns":usrAwns, "qnid":qnn.qnID})
+    localStorage.setItem('SumStore', JSON.stringify(sumStore));
 
     var Temp = '<div class="top3">'
         Temp += '<div class="imgbox"><div class="img2" style="background-image: url(' + qnn.img + ');"><div class="imgsrc">Kjilde: ' + qnn.srcimg + '</div></div></div>'

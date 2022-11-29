@@ -324,8 +324,10 @@ background-color: #101010;
     height: 60vh;
     margin: auto;
     margin-bottom: 1vh;
+    background-color: #202020;
     border: 0.4vh solid #002F99;
-    overflow: auto;
+    overflow-x: visible;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     border-radius: 1.5vh;
 }
@@ -343,13 +345,31 @@ background-color: #101010;
     display: flex;
     flex-direction: row;
     min-height: 6.9vh;
-    width: 95%;
+    width: 91%;
     margin: 1.75%;
+    background-color: #191919;
     border: 0.4vh solid #002F99;
+    padding: 1vh;
+}
+.summary_txtbox{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.summary_txt_trufal {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
 }
 .sumuary_txt {
+    text-align: center;
     width: 80%;
     min-height: 4.20vh;
+    padding-top: 1vh;
+    padding-left: 0.1vh;
+    padding-right: 0.1vh;
+    line-height: 3vh;
+    font-size: 1.5vh;
 }
 @media  all and (max-width: 175vh) {
     .statement{

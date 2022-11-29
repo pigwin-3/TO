@@ -62,7 +62,7 @@ app.get('/qn/:id/all', (req, res) => {
   con.connect(function(err) {
     //console.log("Connected!");
     var id= req.params.id;
-    var sql = "SELECT * FROM `qn-" + id + "`, `qn-ans-" + id + "` WHERE `qn-" + id + "`.qnID = `qn-ans-" + id + "`.`qnID` LIMIT 1000;";
+    var sql = 'SELECT * FROM `qn`, `qn-ans` WHERE`qn`.`theme` = "' + id + '" AND `qn`.qnID = `qn-ans`.`qnID` LIMIT 1000;';
     con.query(sql, function (err, result) {
       if (err) {
         console.log("fuck");
@@ -81,7 +81,7 @@ app.get('/qn/:id', function(req, res){
   const t0 = performance.now();
   // res.send('id: ' + req.params.id); 
   var id= req.params.id;
-  var sql2 = "SELECT * FROM `qn-" + id + "`, `qn-ans-" + id + "` WHERE `qn-" + id + "`.qnID = `qn-ans-" + id + "`.`qnID` ORDER BY RAND() LIMIT 10;";
+  var sql2 = 'SELECT * FROM `qn`, `qn-ans` WHERE`qn`.`theme` = "' + id + '" AND `qn`.qnID = `qn-ans`.`qnID` ORDER BY RAND() LIMIT 10;';
   con.query(sql2, function (err, result) {
     if (err){
       console.log(err);
@@ -95,7 +95,23 @@ app.get('/qn/:id', function(req, res){
   console.log(`qn ${t1 - t0} milliseconds. fra qn-` + id);
 });
 
-
+app.get('/tabl', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    //console.log("Connected!");
+    var sql = "SHOW TABLES;";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      //console.log("test", result);
+      /*const t1 = performance.now();
+      result.push(t1 - t0);*/
+      res.send(result);
+    });
+  });
+  
+  const t1 = performance.now();
+  console.log(`catagorys ${t1 - t0} milliseconds.`);
+})
 // you shold understand this atleast
 app.listen(port, () => {
   console.log(`ip:${port}`);
