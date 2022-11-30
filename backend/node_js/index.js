@@ -72,6 +72,23 @@ app.get('/qn/:id/all', (req, res) => {
   const t1 = performance.now();
   console.log(`qn all ${t1 - t0} milliseconds.`);
 })
+//get fact
+app.get('/fax/:id', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    //console.log("Connected!");
+    var id= req.params.id;
+    var sql = "SELECT * FROM `qn-ans` Where qnID = " + id + ";";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      const t1 = performance.now();
+      result.push(t1 - t0);
+      res.send(result);
+    });
+  });
+  const t1 = performance.now();
+  console.log(`fax ${t1 - t0} milliseconds.`);
+})
 
 app.get('/qn/:id', function(req, res){
   const t0 = performance.now();

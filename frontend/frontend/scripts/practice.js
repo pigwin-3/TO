@@ -4,6 +4,7 @@ function startPracticeGame(theme_id)
     //starts preformanse monitor
     var t0 = performance.now();
     var api = conf('api')
+    document.getElementById("main").innerHTML = "";
     //fetches the catagorys from the api¨
     fetch(api + '/qn/' + theme_id)
         .then((response) => response.json())

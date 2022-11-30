@@ -141,5 +141,5 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
 - [x] legg til et fag
 - [x] legg til en katagori
 - [x] lag 11 dummyspørsmål ![](https://geps.dev/progress/100)
-- [ ] spørsmål legg til 100 spørsmål ![](https://geps.dev/progress/0) (med spørsmål, svar og facta (med sorse))
-- [ ] legg til bilder til alle spørsmålende ![](https://geps.dev/progress/0)
+- [x] spørsmål ![](https://geps.dev/progress/100) (med spørsmål, svar og facta (med sorse))
+- [x] legg til bilder til alle spørsmålende ![](https://geps.dev/progress/100)

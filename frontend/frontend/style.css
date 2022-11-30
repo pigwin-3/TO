@@ -64,7 +64,7 @@ body{
     padding: 1%;
     width: 25%;
     justify-content: center;
-    font-size: 7.5vh;
+    font-size: 5vh;
     font-weight: 700;
     text-align: center;
 }
@@ -361,6 +361,16 @@ background-color: #101010;
     flex-direction: row;
     width: 80%;
 }
+.sumuary_txt_sml {
+    text-align: center;
+    width: 80%;
+    min-height: 4.20vh;
+    padding-top: 1vh;
+    padding-left: 0.1vh;
+    padding-right: 0.1vh;
+    line-height: 3vh;
+    font-size: 1vh;
+}
 .sumuary_txt {
     text-align: center;
     width: 80%;
@@ -369,7 +379,17 @@ background-color: #101010;
     padding-left: 0.1vh;
     padding-right: 0.1vh;
     line-height: 3vh;
-    font-size: 1.5vh;
+    font-size: 2.5vh;
+}
+.sumuary_txt_big {
+    text-align: center;
+    width: 80%;
+    min-height: 4.20vh;
+    padding-top: 1vh;
+    padding-left: 0.1vh;
+    padding-right: 0.1vh;
+    line-height: 3vh;
+    font-size: 2.5vh;
 }
 @media  all and (max-width: 175vh) {
     .statement{

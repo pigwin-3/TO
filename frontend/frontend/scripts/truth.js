@@ -20,16 +20,16 @@ function fax(truFal)
         var cor = ("0")
     }
     if (qnn.trufal == "1"){
-        var wastrufal = ("true")
+        var wastrufal = ("sant")
     }
     else {
-        var wastrufal = ("false")
+        var wastrufal = ("usant")
     }
     if (truFal == 1) {
-        var usrAwns = "true"
+        var usrAwns = "sant"
     }
     else {
-        var usrAwns = "false"
+        var usrAwns = "usant"
     }
     //stores evrythin for practiceSum()
     var sumStore = JSON.parse(localStorage.getItem('SumStore'));
