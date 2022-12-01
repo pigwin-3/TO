@@ -25,7 +25,16 @@ function getCookie(cname) {
 function checkTheme() {
     let theme = getCookie("theTheme");
     if (theme != "") {
-        alert("theme " + theme);
+        console.log("theme " + theme);
+        if (theme == "0") {
+            darkmode()
+        }
+        else if (theme == "1") {
+            lightmode()
+        }
+        else if (theme == "2") {
+            reeeeemode()
+        }
     } else {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             // dark mode
@@ -42,14 +51,31 @@ function checkTheme() {
 checkTheme()
 console.log("idk")
 
-
-
 function darkmode(){
     console.log("darkmode")
     setCookie("theTheme", 0, 30);
-    document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="theme_dark.css" id="themelightdark">'
+    document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_dark.css" id="themelightdark">'
+    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/light.svg" alt="light mode ig?" id="toggleThemeimg">'
 }
 function lightmode(){
     console.log("ohh im blinded by the light")
     setCookie("theTheme", 1, 30);
+    document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_light.css" id="themelightdark">'
+    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/dark.svg" alt="light mode ig?" id="toggleThemeimg">'
+}
+function reeeeemode(){
+    console.log("reeeeeeee")
+    document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_reeee.css" id="themelightdark">'
+    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/cor0.svg" alt="light mode ig?" id="toggleThemeimg">'
+}
+
+function toggleTheme(){
+    console.log("toggle theme")
+    let theme = getCookie("theTheme")
+    if (theme == 0) {
+        lightmode()
+    }
+    else {
+        darkmode()
+    }
 }

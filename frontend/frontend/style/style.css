@@ -2,13 +2,20 @@ body{
     margin: 0%;
 }
 .toggleTheme {
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0);
     height: 10vh;
     width: 10vh;
     position: absolute;
     right: 0px;
     top: 0px;
+    border: 10vh;
     overflow: hidden;
+}
+#toggleThemeimg {
+    opacity: 0.4;
+}
+.toggleTheme:hover #toggleThemeimg {
+    opacity: 1;
 }
 /* box har alt i seg */
 #main{
