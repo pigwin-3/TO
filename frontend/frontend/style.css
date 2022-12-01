@@ -1,6 +1,15 @@
 body{
     margin: 0%;
 }
+.toggleTheme {
+    background-color: red;
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
+}
 /* box har alt i seg */
 #main{
     min-height: 100vh;
@@ -8,8 +17,6 @@ body{
     flex-direction: column;
     font-family: Arial, sans-serif;
     overflow: hidden;
-    background-color: #202020;
-    color: #f5f5f5;
 }
 /* for alt*/
 .title{
@@ -27,13 +34,11 @@ body{
 /* for hovedside, katgori velging, spillsiden */
 .top1 {
     display: block;
-    background-color: #191919;
     height: 75vh;
     width: 80%;
     margin: auto;
     overflow: auto;
     scroll-behavior: smooth;
-    border: 0.4vh solid #002F99;
     border-radius: 3vh;
     padding-top: 5px;
 }
@@ -53,7 +58,6 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: #202020;
     border-radius: 1.5vh;
     height: 20vh;
     width: 98%;
@@ -74,8 +78,6 @@ body{
     font-size: 2.5vh;
 }
 .btn {
-    background-color: #191919;
-    border: 0.4vh solid #002F99;
     font-size: 6vh;
     font-weight: 600;
     height: 8vh;
@@ -85,17 +87,10 @@ body{
     text-align: center;
     transition: 0.2s;
     border-radius: 1.5vh;
-    color: #f5f5f5;
     cursor: pointer;
-}
-.btn:hover {
-    border: 0.4vh solid #0039bf;
-    background-color: #101010;
 }
 /*for spillsiden*/
 .btn2 {
-    background-color: #191919;
-    border: 0.4vh solid #002F99;
     font-size: 12vh;
     font-weight: 600;
     height: 14vh;
@@ -107,13 +102,8 @@ body{
     text-align: center;
     transition: 0.2s;
     border-radius: 1.5vh;
-    color: #f5f5f5;
     cursor: pointer;
     transform: translateX(50%);
-}
-.btn2:hover {
-    border: 0.4vh solid #0039bf;
-    background-color: #101010;
 }
 
 /* for spørsmålet, sanheten */
@@ -127,8 +117,6 @@ body{
 }
 .imgsrc {
     position: absolute;
-    background-color: rgba(250, 235, 215, 0.5);
-    color: #101010;
     bottom: 0;
     left: 0;
     border-radius: 0.5vh;
@@ -141,10 +129,8 @@ body{
     justify-content: center;
     height: 70vh;
     width: 80%;
-    background-color: #191919;
     margin: auto;
     margin-bottom: 0%;
-    border: 0.4vh solid #002F99;
     border-radius: 3vh;
 }
 .img{
@@ -154,7 +140,6 @@ body{
     position: absolute;
     bottom: 25.9%;
     border-radius: 0.5vh;
-    background-color: #202020;
     background-size: cover;
 }
 .statement{
@@ -164,8 +149,6 @@ body{
     font-weight: 700;
 }
 .btntru{
-    border: 0.4vh solid #269900;
-    background-color: #191919;
     margin-top: 0.50%;
     border-radius: 1.5vh;
     height: 95%;
@@ -175,19 +158,11 @@ body{
     text-align: center;
     font-size: 11vh;
     font-weight: 500;
-    color: #1DB000;
     transition: 0.2s;
     max-width: 92%;
-    color: #f5f5f5;
     cursor: pointer;
 }
-.btntru:hover {
-    border: 0.4vh solid #178b00;
-    background-color: #101010;
-}
 .btnfal{
-    border: 0.4vh solid #990000;
-    background-color: #191919;
     margin-top: 0.50%;
     border-radius: 1.5vh;
     height: 95%;
@@ -197,15 +172,9 @@ body{
     text-align: center;
     font-size: 11vh;
     font-weight: 500;
-    color: #c00000;
     transition: 0.2s;
     max-width: 92%;
-    color: #f5f5f5;
     cursor: pointer;
-}
-.btnfal:hover {
-border: 0.4vh solid #6a0000;
-background-color: #101010;
 }
 /*for sanheten*/
 .low2{
@@ -223,10 +192,8 @@ background-color: #101010;
     flex-direction: row;
     height: 70vh;
     width: 80%;
-    background-color: #191919;
     margin: auto;
     margin-bottom: 0%;
-    border: 0.4vh solid #002F99;
     border-radius: 3vh;
 }
 .imgbox {
@@ -242,7 +209,6 @@ background-color: #101010;
     position: absolute;
     bottom: 25.9%;
     border-radius: 2.5vh;
-    background-color: #202020;
     margin: auto;
     margin-bottom: 2.5vh;
 }
@@ -253,13 +219,11 @@ background-color: #101010;
 .trufax{
     font-size: 11vh;
     font-weight: 750;
-    color: #1DB000;
     text-align: center;
 }
 .falfax{
     font-size: 11vh;
     font-weight: 750;
-    color: #c00000;
     text-align: center;
 }
 /*.text brukes også i sumuery*/
@@ -268,8 +232,6 @@ background-color: #101010;
     font-size: 2.5vh;
 }
 .btnnex{
-    border: 0.4vh solid #002F99;
-    background-color: #191919;
     margin-top: 0.50%;
     border-radius: 1.5vh;
     height: 95%;
@@ -279,12 +241,7 @@ background-color: #101010;
     font-weight: 500;
     transition: 0.2s;
     max-width: 92%;
-    color: #f5f5f5;
     cursor: pointer;
-}
-.btnnex:hover {
-    border: 0.4vh solid #0039bf;
-    background-color: #101010;
 }
 /*for sumuery*/
 .top4 {
@@ -293,15 +250,11 @@ background-color: #101010;
     flex-direction: column;
     height: 70vh;
     width: 80%;
-    background-color: #191919;
     margin: auto;
     margin-bottom: 0%;
-    border: 0.4vh solid #002F99;
     border-radius: 3vh;
 }
 .btnfin{
-    border: 0.4vh solid #002F99;
-    background-color: #191919;
     margin-top: 0.50%;
     border-radius: 1.5vh;
     height: 95%;
@@ -311,12 +264,7 @@ background-color: #101010;
     font-weight: 500;
     transition: 0.2s;
     max-width: 92%;
-    color: #f5f5f5;
     cursor: pointer;
-}
-.btnfin:hover {
-    border: 0.4vh solid #0039bf;
-    background-color: #101010;
 }
 .result {
     width: 50vh;
@@ -324,8 +272,6 @@ background-color: #101010;
     height: 60vh;
     margin: auto;
     margin-bottom: 1vh;
-    background-color: #202020;
-    border: 0.4vh solid #002F99;
     overflow-x: visible;
     overflow-y: scroll;
     scroll-behavior: smooth;
@@ -347,8 +293,6 @@ background-color: #101010;
     min-height: 6.9vh;
     width: 91%;
     margin: 1.75%;
-    background-color: #191919;
-    border: 0.4vh solid #002F99;
     padding: 1vh;
 }
 .summary_txtbox{
