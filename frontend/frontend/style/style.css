@@ -13,8 +13,10 @@ body{
 }
 #toggleThemeimg {
     opacity: 0.4;
+    transition: all 0.5s ease-in;
 }
 .toggleTheme:hover #toggleThemeimg {
+    transition: all 0.1s ease-in;
     opacity: 1;
 }
 /* box har alt i seg */
@@ -134,6 +136,8 @@ body{
 .top2 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 70vh;
     width: 80%;
     margin: auto;
@@ -144,8 +148,6 @@ body{
     height: 45vh;
     width: 45vh;
     max-width: 80%;
-    position: absolute;
-    bottom: 25.9%;
     border-radius: 0.5vh;
     background-size: cover;
 }
@@ -182,6 +184,23 @@ body{
     transition: 0.2s;
     max-width: 92%;
     cursor: pointer;
+}
+.progressbar {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 5vh;
+    background-color: wheat;
+    overflow: hidden;
+    border-radius: 1vh;
+}
+.progressbarcor {
+    height: 100%;
+    background-color: greenyellow;
+}
+.progressbarwro {
+    height: 100%;
+    background-color: red;
 }
 /*for sanheten*/
 .low2{

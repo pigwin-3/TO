@@ -11,7 +11,8 @@ function continuePracticeGame()
     localStorage.setItem('TheQN', JSON.stringify(qn));
 
     var Temp = '<div class="top2">';
-        Temp += '<div class="statement">' + qn.qn + '</div>';
+        Temp += '<div class="statement">' + qn.qn  + '</div>' + '<br>';
+        Temp += '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + '0' + '0%;"></div>' + '<div class="progressbarwro" style="width: ' + '0' + '0%;"></div>' + '</div>';
         Temp += '<div class="img" style="background-image: url(' + qn.img + ');"><div class="imgsrc">Kjilde: ' + qn.srcimg + '</div></div>';
         Temp += '</div>';
         Temp += '<div class="low"><button class="btntru" onClick="fax(`1`)">sant</button><button class="btnfal" onClick="fax(`0`)">usant</button></div>';
