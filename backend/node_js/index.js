@@ -5,6 +5,7 @@ const cors = require('cors');
 var mysql = require('mysql');
 const { time } = require('console');
 var config  = require("./conf.json");
+const { json } = require('express');
 
 const app = express();
 app.use(cors());
@@ -124,6 +125,38 @@ app.get('/tabl', (req, res) => {
   
   const t1 = performance.now();
   console.log(`catagorys ${t1 - t0} milliseconds.`);
+})
+
+app.get('/starttime', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    var time = new Date().getTime();
+    var id = (time + "" + Math.floor(Math.random() * 1000) + 1 - 1).toString(16)
+    //console.log(time + " " + id)
+    var sql = "INSERT INTO `time` (`id`, `TimestampStarted`) VALUES ('" + id + "', '" + time + "')";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      //console.log(result)
+      res.send(JSON.parse('{"id":"' + id + '"}'));
+    });
+  });
+})
+
+app.get('/time/:qnid/:qnno/:awns/:id', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    var time = new Date().getTime();
+    var qnid= req.params.qnid;
+    var qnno= req.params.qnno;
+    var awns= req.params.awns;
+    var id= req.params.id;
+    var sql = "UPDATE `time` SET `qn" + qnno + "`='" + qnid + "',`qn" + qnno + "awns`='" + awns + "',`qn" + qnno + "Timestamp`='" + time + "' WHERE `id` = '" + id + "'";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log(result)
+      res.send(JSON.parse('{"id":"' + id + '"}'));
+    });
+  });
 })
 // you shold understand this atleast
 app.listen(port, () => {
