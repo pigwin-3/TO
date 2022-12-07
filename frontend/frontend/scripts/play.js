@@ -1,15 +1,23 @@
-function startPracticeGame(theme_id)
+function startGame(theme_id)
 {
     console.log(theme_id);
     //starts preformanse monitor
     var t0 = performance.now();
     var api = conf('api')
     document.getElementById("main").innerHTML = "";
-    //fetches the catagorys from the api¨
-    fetch(api + '/qnawns/' + theme_id)
+    fetch(api + '/time/start')
         .then((response) => response.json())
-        .then(
-            
+        .then(           
+            data => {
+                console.log(data)
+                localStorage.setItem('timeID', JSON.stringify(data));
+            }
+        )
+
+    //fetches the catagorys from the api¨
+    fetch(api + '/qn/' + theme_id)
+        .then((response) => response.json())
+        .then(           
             data => {
                 //extracts the api response time from the json
                 let api = data.pop();
@@ -22,14 +30,15 @@ function startPracticeGame(theme_id)
                 //puts the json values into local storage as a strings
                 localStorage.setItem('TheQN', JSON.stringify(qn));
                 localStorage.setItem('TheData', JSON.stringify(data));
-                localStorage.setItem('progres', JSON.stringify({"cor" : 0,"wro" : 0}));
 
-                var Temp = '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + '0' + '0%;"></div>' + '<div class="progressbarwro" style="width: ' + '0' + '0%;"></div>' + '</div>';
-                    Temp += '<div class="top2">';
+                localStorage.setItem('qnNum', 0);
+
+                var Temp = '<div class="top2">';
                     Temp += '<div class="statement">' + qn.qn + '</div>';
+                    Temp += '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + '0' + '0%;"></div>' + '</div>';
                     Temp += '<div class="img" style="background-image: url(' + qn.img + ');"><div class="imgsrc">Kjilde: ' + qn.srcimg + '</div></div>';
                     Temp += '</div>';
-                    Temp += '<div class="low"><button class="btntru" onClick="fax(`1`)">sant</button><button class="btnfal" onClick="fax(`0`)">usant</button></div>';
+                    Temp += '<div class="low"><button class="btntru" onClick="checkGame(`1`)">sant</button><button class="btnfal" onClick="checkGame(`0`)">usant</button></div>';
                     Temp += '</div>'
                 //stops preformanse timer
                 var t1 = performance.now();

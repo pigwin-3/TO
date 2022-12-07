@@ -54,7 +54,7 @@ app.get('/theme/:id', (req, res) => {
 
 
 // get the questions and ansers
-app.get('/qn/:id/all', (req, res) => {
+app.get('/qnawns/:id/all', (req, res) => {
   const t0 = performance.now();
   con.connect(function(err) {
     //console.log("Connected!");
@@ -73,6 +73,25 @@ app.get('/qn/:id/all', (req, res) => {
   const t1 = performance.now();
   console.log(`qn all ${t1 - t0} milliseconds.`);
 })
+
+app.get('/qnawns/:id', function(req, res){
+  const t0 = performance.now();
+  // res.send('id: ' + req.params.id); 
+  var id= req.params.id;
+  var sql2 = 'SELECT * FROM `qn`, `qn-ans` WHERE`qn`.`theme` = "' + id + '" AND `qn`.qnID = `qn-ans`.`qnID` ORDER BY RAND() LIMIT 10;';
+  con.query(sql2, function (err, result) {
+    if (err){
+      console.log(err);
+    }
+    //console.log("test", result);
+    const t1 = performance.now();
+    result.push(t1 - t0);
+    res.send(result);
+  });
+  const t1 = performance.now();
+  console.log(`qn ${t1 - t0} milliseconds. fra qn-` + id);
+});
+
 //get fact
 app.get('/fax/:id', (req, res) => {
   const t0 = performance.now();
@@ -91,23 +110,6 @@ app.get('/fax/:id', (req, res) => {
   console.log(`fax ${t1 - t0} milliseconds.`);
 })
 
-app.get('/qn/:id', function(req, res){
-  const t0 = performance.now();
-  // res.send('id: ' + req.params.id); 
-  var id= req.params.id;
-  var sql2 = 'SELECT * FROM `qn`, `qn-ans` WHERE`qn`.`theme` = "' + id + '" AND `qn`.qnID = `qn-ans`.`qnID` ORDER BY RAND() LIMIT 10;';
-  con.query(sql2, function (err, result) {
-    if (err){
-      console.log(err);
-    }
-    //console.log("test", result);
-    const t1 = performance.now();
-    result.push(t1 - t0);
-    res.send(result);
-  });
-  const t1 = performance.now();
-  console.log(`qn ${t1 - t0} milliseconds. fra qn-` + id);
-});
 
 app.get('/tabl', (req, res) => {
   const t0 = performance.now();
@@ -127,7 +129,25 @@ app.get('/tabl', (req, res) => {
   console.log(`catagorys ${t1 - t0} milliseconds.`);
 })
 
-app.get('/starttime', (req, res) => {
+app.get('/qn/:id', function(req, res){
+  const t0 = performance.now();
+  // res.send('id: ' + req.params.id); 
+  var id= req.params.id;
+  var sql2 = 'SELECT * FROM `qn` WHERE`qn`.`theme` = "' + id + '" ORDER BY RAND() LIMIT 10;';
+  con.query(sql2, function (err, result) {
+    if (err){
+      console.log(err);
+    }
+    //console.log("test", result);
+    const t1 = performance.now();
+    result.push(t1 - t0);
+    res.send(result);
+  });
+  const t1 = performance.now();
+  console.log(`qn ${t1 - t0} milliseconds. fra qn-` + id);
+});
+
+app.get('/time/start', (req, res) => {
   const t0 = performance.now();
   con.connect(function(err) {
     var time = new Date().getTime();

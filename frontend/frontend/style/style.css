@@ -127,7 +127,6 @@ body{
 .imgsrc {
     position: absolute;
     bottom: 0;
-    left: 0;
     border-radius: 0.5vh;
     padding: 1px;
     font-size: 2vh;
@@ -145,6 +144,7 @@ body{
     border-radius: 3vh;
 }
 .img{
+    position: relative;
     height: 45vh;
     width: 45vh;
     max-width: 80%;
@@ -154,8 +154,9 @@ body{
 .statement{
     text-align: center;
     padding: 1vh;
-    font-size: 7vh;
+    font-size: 5vh;
     font-weight: 700;
+    margin-top: 0%;
 }
 .btntru{
     margin-top: 0.50%;
@@ -190,17 +191,16 @@ body{
     flex-direction: row;
     width: 60vw;
     height: 5vh;
-    background-color: wheat;
     overflow: hidden;
     border-radius: 1vh;
+    margin-top: 2vh;
+    align-self: center;
 }
 .progressbarcor {
     height: 100%;
-    background-color: greenyellow;
 }
 .progressbarwro {
     height: 100%;
-    background-color: red;
 }
 /*for sanheten*/
 .low2{
@@ -417,7 +417,6 @@ body{
         height: 35vw;
         width: 35vw;
         max-width: 80%;
-        bottom: 39.5%;
     }
     .top2 {
         height: 50vh;

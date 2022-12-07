@@ -1,4 +1,4 @@
-function continuePracticeGame(truFal)
+function continueGame(qnNum)
 {
     //starts preformanse monitor
     var t0 = performance.now();
@@ -9,14 +9,13 @@ function continuePracticeGame(truFal)
     let qn = data.pop();
     localStorage.setItem('TheData', JSON.stringify(data));
     localStorage.setItem('TheQN', JSON.stringify(qn));
-    var prog = (JSON.parse(localStorage.getItem('progres')));
     
-    var Temp = '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + prog.cor + '0%;"></div>' + '<div class="progressbarwro" style="width: ' + prog.wro + '0%;"></div>' + '</div>';
+    var Temp = '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + qnNum + '0%;"></div>' + '</div>';
         Temp += '<div class="top2">';
         Temp += '<div class="statement">' + qn.qn  + '</div>' + '<br>';
         Temp += '<div class="img" style="background-image: url(' + qn.img + ');"><div class="imgsrc">Kjilde: ' + qn.srcimg + '</div></div>';
         Temp += '</div>';
-        Temp += '<div class="low"><button class="btntru" onClick="fax(`1`)">sant</button><button class="btnfal" onClick="fax(`0`)">usant</button></div>';
+        Temp += '<div class="low"><button class="btntru" onClick="checkGame(`1`)">sant</button><button class="btnfal" onClick="checkGame(`0`)">usant</button></div>';
         Temp += '</div>'
     //stops preformanse timer
     var t1 = performance.now();

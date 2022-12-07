@@ -64,6 +64,15 @@
 border: 0.4vh solid #6a0000;
 background-color: #101010;
 }
+.progressbar {
+    background-color: #191919;
+}
+.progressbarcor {
+    background-color: #5a9009;
+}
+.progressbarwro {
+    background-color: #ad0000;
+}
 .top3 {
     background-color: #191919;
     border: 0.4vh solid #002F99;

@@ -4,6 +4,8 @@ function fax(truFal)
     var t0 = performance.now();
     //gets data from local storage
     const qn = localStorage.getItem('TheQN');
+    var prog = (JSON.parse(localStorage.getItem('progres')));
+    console.log(prog)
     //parces the json string (from practice.js)
     var qnn = (JSON.parse(qn))
     //checks if the awnser was correct or not
@@ -12,13 +14,16 @@ function fax(truFal)
         var classTruFal = ("trufax")
         var faltru = ("Riktig!")
         var cor = ("1")
+        prog.cor = prog.cor + 1
     }
     else {
         //console.log("wrong")
         var classTruFal = ("falfax")
         var faltru = ("Feil")
         var cor = ("0")
+        prog.wro = prog.wro + 1
     }
+    localStorage.setItem('progres', JSON.stringify(prog));
     if (qnn.trufal == "1"){
         var wastrufal = ("sant")
     }

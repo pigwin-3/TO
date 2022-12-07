@@ -6,7 +6,7 @@ function game(game_id)
 
     var Temp = '<div class="title">spillside</div>';
     Temp += '<div class="top1">'
-    Temp += '<button class="btn2">spill nå</button><br>'
+    Temp += '<button class="btn2" onClick="startGame(`' + game_id + '`)">spill nå</button><br>'
     Temp += '<button class="btn2" onClick="startPracticeGame(`' + game_id + '`)">øvelse</button>'
     //stops preformanse timer
     var t1 = performance.now();

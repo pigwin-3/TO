@@ -4,6 +4,7 @@ for (let i = 0; i < 100; i ++) {
     console.log((time + "" + Math.floor(Math.random() * 1000) + 1 - 1).toString(16))
     sleep(1);
 }
+console.log(9 >= 9)
 function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
