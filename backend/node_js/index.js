@@ -162,6 +162,33 @@ app.get('/time/start', (req, res) => {
   });
 })
 
+app.get('/time/get/:id', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    var id= req.params.id;
+    //console.log(time + " " + id)
+    var sql = "SELECT * FROM `time` WHERE `id` = '" + id + "'";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      //console.log(result)
+      res.send(result);
+    });
+  });
+})
+app.get('/time/get/', (req, res) => {
+  const t0 = performance.now();
+  con.connect(function(err) {
+    var id= req.params.id;
+    //console.log(time + " " + id)
+    var sql = "SELECT * FROM `time`";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      //console.log(result)
+      res.send(result);
+    });
+  });
+})
+
 app.get('/time/:qnid/:qnno/:awns/:id', (req, res) => {
   const t0 = performance.now();
   con.connect(function(err) {
@@ -178,6 +205,24 @@ app.get('/time/:qnid/:qnno/:awns/:id', (req, res) => {
     });
   });
 })
+
+app.get('/qnsum/:id', function(req, res){
+  const t0 = performance.now();
+  var id= req.params.id;
+  var sql2 = 'SELECT * FROM `qn`, `qn-ans` WHERE `qn`.qnID = ' + id + ' AND `qn`.qnID = `qn-ans`.`qnID`;';
+  con.query(sql2, function (err, result) {
+    if (err){
+      console.log(err);
+    }
+    //console.log("test", result);
+    const t1 = performance.now();
+    result.push(t1 - t0);
+    res.send(result);
+  });
+  const t1 = performance.now();
+  console.log(`qn ${t1 - t0} milliseconds. qn ` + id);
+});
+
 // you shold understand this atleast
 app.listen(port, () => {
   console.log(`ip:${port}`);

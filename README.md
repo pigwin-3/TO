@@ -112,30 +112,30 @@ om du spiller øve vil du få fakta om spørsmålet etter du svarte
     - [x] spillside
     - [x] spørsmål side
     - [x] facta side
-- [ ] js (endring av html css kan skje her) kobling til backend
+- [x] js (endring av html css kan skje her) kobling til backend
     - [x] Hovedside (for øvingdel)
     - [x] katagori side (for øvingdel)
     - [x] spillside (for øvingdel)
-    - [ ] spørsmål side (for øvingdel)
-    - [ ] facta side (for øvingdel)
-- [ ] ferdig (med øvingdel)
-    - [ ] spørsmål side (for spilldel)
+    - [x] spørsmål side (for øvingdel)
+    - [x] facta side (for øvingdel)
+- [x] ferdig (med øvingdel)
+    - [x] spørsmål side (for spilldel)
     - [ ] siste side (idk yet) (for spilldel)
 - [ ] ferdig (gjenerelt)
 ### backend
 - [x] koble til sql
-- [ ] få til å sende ut rigktig data til sidende(for øvingdel)
+- [x] få til å sende ut rigktig data til sidende(for øvingdel)
     - [x] Hovedside
     - [x] katagori (*tema) side
     - [x] spillside
-    - [ ] spørsmål side
-    - [ ] facta side
-- [ ] få til å sende ut rigktig data til sidende(for spilldel)
-    - [ ] Hovedside
-    - [ ] katagori side
+    - [x] spørsmål side
+    - [x] facta side
+- [x] få til å sende ut rigktig data til sidende(for spilldel)
+    - [x] Hovedside
+    - [x] katagori side
     - [x] spillside
     - [x] spørsmål side
-- [ ] ferdig
+- [x] ferdig
 ### sql
 - [x] lage stukturen
 - [x] legg til et fag
