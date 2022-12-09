@@ -207,20 +207,15 @@ app.get('/time/:qnid/:qnno/:awns/:id', (req, res) => {
 })
 
 app.get('/qnsum/:id', function(req, res){
-  const t0 = performance.now();
   var id= req.params.id;
-  var sql2 = 'SELECT * FROM `qn`, `qn-ans` WHERE `qn`.qnID = ' + id + ' AND `qn`.qnID = `qn-ans`.`qnID`;';
+  var sql2 = 'SELECT qn, trufal FROM `qn`, `qn-ans` WHERE `qn`.qnID = ' + id + ' AND `qn`.qnID = `qn-ans`.`qnID`;';
   con.query(sql2, function (err, result) {
     if (err){
       console.log(err);
     }
     //console.log("test", result);
-    const t1 = performance.now();
-    result.push(t1 - t0);
     res.send(result);
   });
-  const t1 = performance.now();
-  console.log(`qn ${t1 - t0} milliseconds. qn ` + id);
 });
 
 // you shold understand this atleast

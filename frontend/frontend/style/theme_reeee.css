@@ -1,3 +1,4 @@
+/*https://randomwordgenerator.com/color.php*/
 #main{
 
     background-color: #924E7D;
@@ -71,6 +72,9 @@ background-color: #B44C43;
 .progressbarwro {
     background-color: #D0D0D0;
 }
+.progressbarprog {
+    background-color: #343B29;
+}
 .top3 {
     background-color: #EAE6CA;
     border: 0.4vh solid #79553D;
@@ -106,7 +110,7 @@ background-color: #B44C43;
     border: 0.4vh solid #4C2F27;
     background-color: #193737;
 }
-.result {
+#result {
     background-color: #f5f5f5;
     border: 0.4vh solid #294b98;
 }
@@ -114,4 +118,3 @@ background-color: #B44C43;
     background-color: #332F2C;
     border: 0.4vh solid #A18594;
 }
-/*https://randomwordgenerator.com/color.php*/

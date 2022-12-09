@@ -10,7 +10,7 @@ function continueGame(qnNum)
     localStorage.setItem('TheData', JSON.stringify(data));
     localStorage.setItem('TheQN', JSON.stringify(qn));
     
-    var Temp = '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + qnNum + '0%;"></div>' + '</div>';
+    var Temp = '<div class="progressbar">' + '<div class="progressbarprog" style="width: ' + qnNum + '0%;"></div>' + '</div>';
         Temp += '<div class="top2">';
         Temp += '<div class="statement">' + qn.qn  + '</div>' + '<br>';
         Temp += '<div class="img" style="background-image: url(' + qn.img + ');"><div class="imgsrc">Kjilde: ' + qn.srcimg + '</div></div>';

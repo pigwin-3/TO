@@ -12,10 +12,30 @@ body{
     overflow: hidden;
 }
 #toggleThemeimg {
+    width: 100%;
     opacity: 0.4;
     transition: all 0.5s ease-in;
 }
 .toggleTheme:hover #toggleThemeimg {
+    transition: all 0.1s ease-in;
+    opacity: 1;
+}
+.goHome {
+    background-color: rgba(255, 255, 255, 0);
+    height: 10vh;
+    width: 10vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 10vh;
+    overflow: hidden;
+}
+#goHomeimg {
+    width: 100%;
+    opacity: 0.4;
+    transition: all 0.5s ease-in;
+}
+.goHome:hover #goHomeimg {
     transition: all 0.1s ease-in;
     opacity: 1;
 }
@@ -202,6 +222,9 @@ body{
 .progressbarwro {
     height: 100%;
 }
+.progressbarprog {
+    height: 100%;
+}
 /*for sanheten*/
 .low2{
     display: flex;
@@ -292,8 +315,8 @@ body{
     max-width: 92%;
     cursor: pointer;
 }
-.result {
-    width: 50vh;
+#result {
+    width: 60vh;
     max-width: 80vw;
     height: 60vh;
     margin: auto;
@@ -304,12 +327,12 @@ body{
     border-radius: 1.5vh;
 }
 /* fjern scrollbar */
-.result::-webkit-scrollbar {
+#result::-webkit-scrollbar {
     display: none;
 }
 
 /* fjern den for IE, Edge og Firefox */
-.result {
+#result {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -325,6 +348,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 90%;
+    min-height: 4.20vh;
 }
 .summary_txt_trufal {
     display: flex;

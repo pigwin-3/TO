@@ -8,7 +8,7 @@ function practiceSum()
     var Temp = '<div class="top4">'
         Temp += '<div class="title">goofy ahhh</div>'
         Temp += '<div class="text"></div>'
-        Temp += '<div class="result">'
+        Temp += '<div id="result">'
         console.log(sumStore)
         sumStore.forEach((itemData) => {
             Temp += '<div class="sumuary"><div class="summary_txtbox"><div class="sumuary_txt_big">';

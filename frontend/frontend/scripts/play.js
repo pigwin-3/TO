@@ -33,9 +33,9 @@ function startGame(theme_id)
 
                 localStorage.setItem('qnNum', 0);
 
-                var Temp = '<div class="top2">';
+                var Temp = '<div class="progressbar">' + '</div>' + '<div class="top2">';
                     Temp += '<div class="statement">' + qn.qn + '</div>';
-                    Temp += '<div class="progressbar">' + '<div class="progressbarcor" style="width: ' + '0' + '0%;"></div>' + '</div>';
+                    Temp += '<div class="progressbar">' + '<div class="progressbarprog" style="width: ' + '0' + '0%;"></div>' + '</div>';
                     Temp += '<div class="img" style="background-image: url(' + qn.img + ');"><div class="imgsrc">Kjilde: ' + qn.srcimg + '</div></div>';
                     Temp += '</div>';
                     Temp += '<div class="low"><button class="btntru" onClick="checkGame(`1`)">sant</button><button class="btnfal" onClick="checkGame(`0`)">usant</button></div>';
