@@ -56,17 +56,20 @@ function darkmode(){
     setCookie("theTheme", 0, 30);
     document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_dark.css" id="themelightdark">'
     document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/light.svg" alt="light mode ig?" id="toggleThemeimg">'
+    document.getElementById('goHomeimg').outerHTML = '<img src="icon/home0.svg" alt="home" id="goHomeimg">'
 }
 function lightmode(){
     console.log("ohh im blinded by the light")
     setCookie("theTheme", 1, 30);
     document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_light.css" id="themelightdark">'
-    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/dark.svg" alt="light mode ig?" id="toggleThemeimg">'
+    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/dark.svg" alt="dark mode" id="toggleThemeimg">'
+    document.getElementById('goHomeimg').outerHTML = '<img src="icon/home1.svg" alt="home" id="goHomeimg">'
 }
 function reeeeemode(){
     console.log("reeeeeeee")
     document.getElementById('themelightdark').outerHTML = '<link rel="stylesheet" href="style/theme_reeee.css" id="themelightdark">'
-    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/cor0.svg" alt="light mode ig?" id="toggleThemeimg">'
+    document.getElementById('toggleThemeimg').outerHTML = '<img src="icon/cor0.svg" alt="da fuk" id="toggleThemeimg">'
+    document.getElementById('goHomeimg').outerHTML = '<img src="icon/home1.svg" alt="home" id="goHomeimg">'
 }
 
 function toggleTheme(){

@@ -11,7 +11,7 @@ function sumGame()
                 console.log(data)
                 var Temp = '<div class="top4">'
                     Temp += '<div class="title">goofy ahhh</div>'
-                    Temp += '<div class="text"></div>'
+                    Temp += '<div class="text">time: ' + ((data.qn9Timestamp - data.TimestampStarted)/1000) + ' sek' + '</div>'
                     Temp += '<div id="result">'
                     Temp += '</div>'
                     Temp += '</div>'
